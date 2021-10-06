@@ -22,10 +22,8 @@ the sequence will always reach one.
 **Task:** given any integer number $n$, write a function that implements the Collatz algorithm. Then, write a loop to retrieve the entire sequence. Plot the sequence. 
 
 ## Implementing the Collatz algorithm
-
-
 ```{r collatz algorithm}
-n <- 33
+n <- 101
 
 collatz <- function(n) {
   if (n%%2 == 0) { # is n even?
@@ -39,7 +37,7 @@ collatz <- function(n) {
 
 ## Loop: Retrieving the entire sequence
 ```{r loop}
-result <- c()
+result <- c(n)
 
 while (n != 1) {
   n <- collatz(n)
@@ -49,8 +47,6 @@ result
 ```
 
 ## Plotting the sequence
-
-
 ```{r plot}
 # result as a tibble
 x_axis <- 1:length(result)
